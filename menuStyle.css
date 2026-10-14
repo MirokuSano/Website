@@ -4,18 +4,18 @@
  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .nav-list {
- display: flex; /* Inaalign yung navigation list horizontally */
+ display: flex; /* inaalign yung navigation list horizontally */
  flex-direction: row; /* nag iistart ang mga items from left to right(Home, About, Gallery, Portfolio, Contact */
- justify-content: flex-start; /* Nilalagay yung mga items sa start mg menu */
- align-items: center; /* Linalagay sa center yug mga items sa navigation list */
- list-style-type: none; /* Tinatanggal lahat ng bullet points sa unordered list ng navigation list */
- margin: 0; /* Tinatanggal yung default margin ng browser */
- padding: 0; /* Tinatanggal yung default padding ng browser */
+ justify-content: flex-start; /* nilalagay yung mga items sa start mg menu */
+ align-items: center; /* linalagay sa center yug mga items sa navigation list */
+ list-style-type: none; /* tinatanggal lahat ng bullet points sa unordered list ng navigation list */
+ margin: 0; /* tinatanggal yung default margin ng browser */
+ padding: 0; /* tinatanggal yung default padding ng browser */
 }
 
 .nav-link {
  display: block; /* Expands clickable box to fill padding */
- padding: 14px 20px; /* Breathing room inside target box */
+ padding: 14px 20px; /* naglalagay ng space sa mga navigation list links */
  color: #FFFFFF; /* pinapalitan kulay ng text into white */
  text-decoration: none; /* tinatanggal underline ng links */
  font-family: 'Segoe UI', sans-serif;

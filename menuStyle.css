@@ -14,7 +14,7 @@
 }
 
 .nav-link {
- display: block; /* Expands clickable box to fill padding */
+ display: block; /* ineexpand yung clickable box para ma fill padding */
  padding: 14px 20px; /* naglalagay ng space sa mga navigation list links */
  color: #FFFFFF; /* pinapalitan kulay ng text into white */
  text-decoration: none; /* tinatanggal underline ng links */

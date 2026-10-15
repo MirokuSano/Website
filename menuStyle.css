@@ -6,7 +6,7 @@
 .nav-list {
  display: flex; /* inaalign yung navigation list horizontally */
  flex-direction: row; /* nag iistart ang mga items from left to right(Home, About, Gallery, Portfolio, Contact */
- justify-content: flex-start; /* nilalagay yung mga items sa start mg menu */
+ justify-content: center; /* nilalagay yung mga items sa start mg menu */
  align-items: center; /* linalagay sa center yug mga items sa navigation list */
  list-style-type: none; /* tinatanggal lahat ng bullet points sa unordered list ng navigation list */
  margin: 0; /* tinatanggal yung default margin ng browser */
@@ -22,6 +22,8 @@
  font-size: 15px;
  font-weight: 600;
  transition: background-color 0.3s ease, color 0.3s ease;
+ justify-content: center; 
+ align-items: center;
 }
 
 /* 1. Unvisited default link state */

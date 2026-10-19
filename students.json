@@ -1,0 +1,72 @@
+[
+  {
+    "lrn": "670921345612",
+    "name": "CRUZ, VAUGHN LESTAT, G.",
+    "age": 17,
+    "section": "12 - Cooper",
+    "image": "images/vaughn.png"
+  },
+  {
+    "lrn": "692120459867",
+    "name": "CONCEPCION, NYT ZEFHIRO C.",
+    "age": 17,
+    "section": "12 - Cooper",
+    "image": "images/nyt.png"
+  },
+  {
+    "lrn": "212120459867",
+    "name": "BERGADO, JULIUS CEAZAR, S.",
+    "age": 17,
+    "section": "12 - Cooper",
+    "image": "images/julius.png"
+  },
+  {
+    "lrn": "612120459867",
+    "name": "DELA CRUZ, ZIANTINO L.",
+    "age": 17,
+    "section": "12 - Cooper",
+    "image": "images/ziantino.png"
+  },
+  {
+    "lrn": "692120459867",
+    "name": "MALIKSI, LANCE KHERWIN C.",
+    "age": 17,
+    "section": "12 - Cooper",
+    "image": "images/lance.png"
+  },
+  {
+    "lrn": "694200459867",
+    "name": "ROSALES, JETHRO, A.",
+    "age": 18,
+    "section": "12 - Cooper",
+    "image": "images/jethro.png"
+  },
+  {
+    "lrn": "0000",
+    "name": "Prince Fries",
+    "age": null,
+    "section": "12 - Cooper",
+    "image": "images/prince.png"
+  },
+  {
+    "lrn": "692128769867",
+    "name": "SALUGAO, RAILEY VALE, A.",
+    "age": 17,
+    "section": "12 - Cooper",
+    "image": "images/railey.png"
+  },
+  {
+    "lrn": "676920459867",
+    "name": "PERALTA, DALE DANIELLE A.",
+    "age": 17,
+    "section": "12 - Cooper",
+    "image": "images/dale.png"
+  },
+  {
+    "lrn": "910120459867",
+    "name": "BAUTO, KIANE CARLO S.",
+    "age": 17,
+    "section": "12 - Cooper",
+    "image": "images/bauto.png"
+  }
+]

@@ -78,3 +78,22 @@
     color: #ffffff;
     box-shadow: 0 10px 15px rgba(27, 54, 93, 0.15);
 }
+
+body {
+        position: relative;
+    	min-height: 100vh;
+    	margin: 0;
+    	padding: 0;
+    	padding-bottom: 60px;
+    	box-sizing: border-box;
+}
+
+footer {
+        position: absolute;
+    	bottom: 0;
+    	left: 0;
+    	width: 100%;
+    	text-align: center;
+	background-color: #1B365D;
+	color: white;
+}

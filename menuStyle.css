@@ -63,76 +63,11 @@
         background-color: #1B365D;
         border-radius: 8px;
         text-decoration: none;
+        font-size: 16px;
+        width: 100%;
+        padding-top: 20px;
 }
 
-.navbar {
- background-color: #1B365D; /* bg color ng navigation bar */
- width: 100%;
- box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-.nav-list {
- display: flex; /* inaalign yung navigation list horizontally */
- flex-direction: row; /* nag iistart ang mga items from left to right(Home, About, Gallery, Portfolio, Contact */
- justify-content: center; /* nilalagay yung mga items sa start mg menu */
- align-items: center; /* linalagay sa center yug mga items sa navigation list */
- list-style-type: none; /* tinatanggal lahat ng bullet points sa unordered list ng navigation list */
- margin: 0; /* tinatanggal yung default margin ng browser */
- padding: 0; /* tinatanggal yung default padding ng browser */
-}
-
-.nav-link {
- display: block; /* ineexpand yung clickable box para ma fill padding */
- padding: 14px 20px; /* naglalagay ng space sa mga navigation list links */
- color: #FFFFFF; /* pinapalitan kulay ng text into white */
- text-decoration: none; /* tinatanggal underline ng links */
- font-family: 'Segoe UI', sans-serif;
- font-size: 15px;
- font-weight: 600;
- transition: background-color 0.3s ease, color 0.3s ease;
- justify-content: center; 
- align-items: center;
-}
-
-/* 1. Unvisited default link state */
-.nav-link:link {
- color: #FFFFFF;
-}
-
-/* 2. Visited link state */
-.nav-link:visited {
- color: #E0E0E0;
-}
-/* 3. Mouse hover state */
-.nav-link:hover {
- background-color: #005A9C;
- color: #FFFFFF;
-}
-/* 4. Keyboard focus state (Accessibility / WCAG compliance) */
-.nav-link:focus {
- outline: 3px solid #FFC107;
- outline-offset: -3px;
- background-color: #004080;
-}
-/* 5. Active click-press state */
-.nav-link:active {
- background-color: #002B55;
- transform: translateY(1px);
-}
-/* 6. Current page highlight class */
-.nav-link.active {
- background-color: #005A9C;
- border-bottom: 4px solid #FFC107;
-}
-
-.box {
-        color: #ffffff;
-        font-size: 1.5rem;
-        background-color: #1B365D;
-        border-radius: 8px;
-        text-decoration: none;
-}
-
-/* test */
 .container {
     display: grid;
     grid-template-columns: repeat(4, 180px);
@@ -140,7 +75,6 @@
     gap: 5px;
     list-style: none;
     padding: 20px;
-    width: 100%;
     justify-content: center;
     }
 
@@ -164,31 +98,6 @@ footer {
     	bottom: 0;
     	left: 0;
     	width: 100%;
-	background-color: #1B365D;
-	color: white;
-}
-
-.box:hover {
-    background-color: #005a9c;
-    color: #ffffff;
-    box-shadow: 0 10px 15px rgba(27, 54, 93, 0.15);
-}
-
-body {
-        position: relative;
-    	min-height: 100vh;
-    	margin: 0;
-    	padding: 0;
-    	padding-bottom: 60px;
-    	box-sizing: border-box;
-}
-
-footer {
-        position: absolute;
-    	bottom: 0;
-    	left: 0;
-    	width: 100%;
-    	text-align: center;
 	background-color: #1B365D;
 	color: white;
 }

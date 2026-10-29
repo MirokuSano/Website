@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Who Beats Goku Game</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+      background-color: #f9f9f9;
+    }
+
+    h2 {
+      margin-bottom: 5px;
+    }
+
+    #scoreBoard {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    #resetBtn {
+      margin-bottom: 20px;
+      padding: 8px 16px;
+      font-weight: bold;
+      cursor: pointer;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    #resetBtn:hover {
+      background-color: #555;
+    }
+
+    .container {
+      display: flex;
+      gap: 30px;
+    }
+
+    .box {
+      width: 180px;
+      min-height: 250px;
+      border: 3px dashed #bbb;
+      border-radius: 10px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      background: #fff;
+    }
+
+    .drop-zone.drag-over {
+      background: #e6f7ff;
+      border-color: #1890ff;
+    }
+
+    .draggable-item {
+      width: 140px;
+      padding: 12px;
+      background-color: #ff4d4f;
+      color: white;
+      text-align: center;
+      border-radius: 6px;
+      cursor: grab;
+      font-weight: bold;
+      user-select: none;
+    }
+
+    .draggable-item:active {
+      cursor: grabbing;
+    }
+
+    #message {
+      margin-top: 15px;
+      font-weight: bold;
+      height: 24px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Who Beats Goku Game</h1>
+  <p>This game is for the Goku glazers so that they would feel satisfied.</p>
+  <p>Instruction: Just drag the characters on the right box.</p>
+  <h6>Disclaimer: Nobody wins at all cuz Goku glazers would be mad as hell. (This game is satire only. Please do not take it seriously.)</h6>
+  <h2>Note: Check below if you wanna see the reason why they dont beat Goku.</h2>
+  <div id="scoreBoard">Score: <span id="score">0</span></div>
+  
+  
+  <button id="resetBtn">Reset Game</button>
+
+  <div class="container">
+    
+    <div class="box" id="characterPool">
+      <div class="draggable-item" draggable="true" id="saitama" data-can-beat="false">Saitama</div>
+      <div class="draggable-item" draggable="true" id="anti-spiral" data-can-beat="false">Anti-Spiral</div>
+      <div class="draggable-item" draggable="true" id="zeno" data-can-beat="false">Zeno</div>
+      <div class="draggable-item" draggable="true" id="rimuru" data-can-beat="false">Rimuru</div>
+      <div class="draggable-item" draggable="true" id="ainz" data-can-beat="false">Ainz</div>
+      <div class="draggable-item" draggable="true" id="anos" data-can-beat="false">Anos</div>
+      <div class="draggable-item" draggable="true" id="luffy" data-can-beat="false">Luffy G5 (fraud)</div>
+      <div class="draggable-item" draggable="true" id="megumi" data-can-beat="false">Megumi Fushiguro (potential man)</div>
+      <div class="draggable-item" draggable="true" id="jinwoo" data-can-beat="false">Sung Jin Woo</div>
+      <div class="draggable-item" draggable="true" id="gojo" data-can-beat="false">Satoru Gojo</div>
+      <div class="draggable-item" draggable="true" id="cid" data-can-beat="false">Cid</div>
+      <div class="draggable-item" draggable="true" id="aizen" data-can-beat="false">Aizen Sosuke</div>
+      <div class="draggable-item" draggable="true" id="steve" data-can-beat="false">Steve</div>
+    </div>
+
+    
+    <div class="box drop-zone" id="dropZone">
+      <p style="color: #888;">Drop answer here</p>
+    </div>
+  </div>
+
+  <div id="message"></div>
+
+  <script src="dragAndDropApiTest.js" defer></script>
+</body>
+</html>

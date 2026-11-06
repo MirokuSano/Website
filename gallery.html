@@ -1,26 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Gallery </title>
-    <link rel="stylesheet" href="menuStyle.css">
-</head>
-    <center>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="menuStyle.css" />
+  </head>
+  <center>
     <body>
-    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+      <nav class="navbar" role="navigation" aria-label="Main Navigation">
         <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
-            <li class="nav-item"><a class="nav-link" href ="portfolio.html">Portfolio</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="portfolio.html">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
         </ul>
-    </nav>
-        <h1> Gallery Page </h1>
-        <footer>
-            <p>&copy; 2026 Luscian Corp | Facebook: @ecnirPPPPP </p>
-        </footer>
+      </nav>
+
+      <h1>
+        My Photo Gallery (This is currently a draft and is currently in
+        progress.)
+      </h1>
+      <div class="carousel" id="carousel">
+        <div class="slides">
+          <figure class="slide">
+            <img src="images/leonThatChill.jpeg" alt="Describe image 1" />
+            <figcaption>This yall goat?</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="images/bigChicken.jpeg" alt="Describe image 2" />
+            <figcaption>Big Inasal</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="images/performative.jpeg" alt="Describe image 3" />
+            <figcaption>Me when exams in 5 mins</figcaption>
+          </figure>
+          <button
+            class="aside prev"
+            type="button"
+            aria-label="Previous slide"
+          >
+            &#10094;
+          </button>
+
+          <button class="aside next" type="button" aria-label="Next slide">
+            &#10095;
+          </button>
+        </div>
+        <div class="dots"></div>
+      </div>
+
+      <footer>
+        <p>&copy; 2026 Luscian Corp | Facebook: @ecnirPPPPP</p>
+      </footer>
+
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+      <script>
+        $(document).ready(function () {
+          // 1. Cache elements and settings
+          const $carousel = $("#carousel");
+          const $slides = $carousel.find(".slide");
+          const $dotsBox = $carousel.find(".dots");
+          const total = $slides.length;
+          const FADE_TIME = 500; // milliseconds
+          const DELAY = 2000; // time between automatic slides
+          let current = 0; // index of the visible slide
+          let timer = null; // holds the autoplay timer
+          // 2. Initial state: show only the first slide
+          $slides.hide().eq(0).show();
+          // 3. Create one dot per slide
+          $slides.each(function (i) {
+            $("<button>")
+              .attr({ type: "button", "aria-label": "Go to slide " + (i + 1) })
+              .addClass("dot" + (i === 0 ? " active" : ""))
+              .data("index", i)
+              .appendTo($dotsBox);
+          });
+          const $dots = $dotsBox.find(".dot");
+          // 4. Show a specific slide
+          function showSlide(index) {
+            if (index === current) return; // nothing to do
+            $slides.eq(current).stop(true, true).fadeOut(FADE_TIME);
+            $slides.eq(index).stop(true, true).fadeIn(FADE_TIME);
+            $dots.removeClass("active").eq(index).addClass("active");
+            current = index;
+          }
+          function nextSlide() {
+            showSlide((current + 1) % total);
+          }
+          function prevSlide() {
+            showSlide((current - 1 + total) % total);
+          }
+          // 5. Controls
+          $carousel.on("click", ".next", nextSlide);
+          $carousel.on("click", ".prev", prevSlide);
+          $dotsBox.on("click", ".dot", function () {
+            showSlide($(this).data("index"));
+          });
+          // 6. Autoplay (pauses on hover)
+          function startAutoplay() {
+            stopAutoplay(); // avoid duplicate timers
+            timer = setInterval(nextSlide, DELAY);
+          }
+          function stopAutoplay() {
+            clearInterval(timer);
+          }
+          $carousel
+            .on("mouseenter", stopAutoplay)
+            .on("mouseleave", startAutoplay);
+          startAutoplay();
+          // 7. Keyboard control
+          $(document).on("keydown", function (event) {
+            if (event.key === "ArrowRight") {
+              nextSlide();
+            } else if (event.key === "ArrowLeft") {
+              prevSlide();
+            }
+          });
+        });
+      </script>
     </body>
-    </center>
+  </center>
 </html>

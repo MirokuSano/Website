@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #Outer {
+            border: 1px solid black;
+            padding-top: 40px;
+            height: 140px;
+            background: orange;
+            display: none;
+        }
+    </style>
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#p1").hover(
+                function () {
+                    $(this).css(
+                        "color",
+                        "orange"
+                    );
+                },
+                function () {
+                    $(this).css(
+                        "color",
+                        "white"
+                    );
+                }
+            );
+        });
+    </script>
+
+ <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+      </script>
+  
+    <script>
+        <!--jQuery code to show blur method-->
+            $(document).ready(function () {
+                $("input").blur(function () {
+                    $(this).css("background-color", "orange");
+                });
+            });
+    </script>
+
+<body style="text-align:center;">
+
+    <div id="Outer">
+        <h1 style="color: black;">
+            HAPPY HALLOWEEN
+        </h1>
+    </div><br>
+
+    <button id="btn">
+        Fade In (method 1)
+    </button>
+
+    <!-- jQuery script of fadeIn() method -->
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("#Outer").fadeIn(1000);
+            });
+        });
+    </script>
+
+    <p id = "p1">BOO! Happy Halloween (method 2, hover)</p>
+
+    Happy Halloween(method 3, blur):
+    <input type="text" name="halloween">
+
+     <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+        // jQuery code to show the working of this method
+        $(document).ready(function () {
+            $("p").click(function () {
+                $(this).fadeOut();
+            });
+        });
+    </script>
+
+    <p>Click this to disappear (method 4, click)</p>
+
+     <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <!--In this example no parameter is passing
+        to the clone method-->
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p2").clone().appendTo("body");
+            });
+        });
+    </script>
+
+    <br> <p2>ok</p2>
+    <p2>test</p2>
+    <button>Method 5, clone</button>
+
+    <br>
+    <a href="index.html">Home</a>
+</body>
+
+</html>

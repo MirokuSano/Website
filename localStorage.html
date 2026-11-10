@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+
+<body>
+    <h1>Save Grades</h1>
+    <label>Lrn</label>
+    <input type="text" id="lrn" name="lrn" maxlength="11" required>
+
+    <label>Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label>Subject</label>
+    <input type="text" id="subject" name="subject" required>
+
+    <label>Grade</label>
+    <input type="number" id="grade" name="grade" min="0" max="100" required>
+    <button id="submit" onclick="saveGrade()">Save</button>
+    
+    <p id="message"></p>
+    <br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Lrn</th>
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+    </table>
+
+    <script>
+        const lrnInput = document.getElementById('lrn');
+        const nameInput = document.getElementById('name');
+        const subjectInput = document.getElementById('subject');
+        const gradeInput = document.getElementById('grade');
+
+        var grades = JSON.parse(localStorage.getItem('grades')) || [];
+
+        function showGrades() {
+            const tableBody = document.getElementById('table-body');
+            tableBody.textContent = "";
+            for (var i = 0; i < grades.length; i++) {
+                var row = tableBody.insertRow();
+                row.insertCell().textContent = grades[i].lrn;
+                row.insertCell().textContent = grades[i].name;
+                row.insertCell().textContent = grades[i].subject;
+                row.insertCell().textContent = grades[i].grade;
+            }
+        }
+
+        function saveGrade() {
+            var lrn = lrnInput.value.trim();
+            var name = nameInput.value.trim();
+            var subject = subjectInput.value.trim();
+            var grade = gradeInput.value.trim();
+
+            if (lrn === "" || name === "" || subject === "" || grade === "") {
+                alert("Fill the fields.");
+                return;
+            }
+
+            var record = {
+                lrn: lrn,
+                name: name,
+                subject: subject,
+                grade: grade
+            };
+
+            grades.push(record);
+            localStorage.setItem('grades', JSON.stringify(grades));
+            
+            const message = document.getElementById('message');
+            message.textContent = "Grade saved successfully!";
+
+            lrnInput.value = "";
+            nameInput.value = "";
+            subjectInput.value = "";
+            gradeInput.value = "";
+        }
+
+        showGrades();
+    </script>
+</body>
+</html>

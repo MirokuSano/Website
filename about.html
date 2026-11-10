@@ -2,9 +2,35 @@
 	<head>
 		<title> About page </title>
 		<link rel="stylesheet" href="menuStyle.css">
-	</head>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
+        <script>
+            $(function () {
+            $("#accordion").accordion({
+             collapsible: true
+            });
+         });
+        </script>
 
-  <center>
+        <style>
+    #accordion {
+      max-width: 700px;
+    }
+
+    .ui-accordion-header {
+      background: #0A182C;
+      color: white;
+    }
+    .ui-accordion-content {  
+      background-color: #d5e9cc;  
+      color: #5986e7;  
+      font-size: 10pt;  
+      line-height: 16pt;  
+    }  
+  </style>
+	</head>
 	<body>
 		<nav class="navbar" role="navigation" aria-label="Main Navigation">
         	<ul class="nav-list">
@@ -15,10 +41,41 @@
             	<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         	</ul>
     	</nav>
-      <h1> About Page </h1>
+    <div id="accordion">
+    <h3>About me</h3>
+    <div>
+      <p>Yes its me thanks</p>
+    </div>
+    <h3>Hobbies</h3>
+    <div>
+      <ul>
+        <li>Gaming</li>
+        <li>Watching Anime</li>
+        <li>Listening to Music</li>
+        <li>Reading Manga</li>
+        <li>Doing nothing</li>
+        <li>Thinking about the past (blinded by nostalgia)</li>
+      </ul>
+    </div>
+    <h3>Favorite games</h3>
+    <div>
+      <ul>
+        <li>Decaying Winter (Roblox)</li>
+        <li>Elemental Battlegrounds (Roblox)</li>
+        <li>Tower Defense Simulator (Roblox)</li>
+        <li>Dungeon Quest (Roblox)</li>
+        <li>Pixel Gun 3D</li>
+        <li>Blockman Go</li>
+        <li>Minecraft</li>
+      </ul>
+    </div>
+    <h3>Favorite songs</h3>
+    <div>
+      <p>I pretty much listen to almost everything lol</p>
+    </div>
+    </div>
 		<footer>
-        	<p>&copy; 2026 Luscian Corp | Facebook: @ecnirPPPPP </p>
+        	<p align="center">&copy; 2026 Luscian Corp | Facebook: @ecnirPPPPP </p>
     	</footer>
 	</body>
-  </center>
 </html>

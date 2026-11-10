@@ -121,7 +121,7 @@ footer {
  .slide img {
  width: 100%;
  height: 100%;
- object-fit: 1000%; /* fill the box without stretching */
+ object-fit: cover; /* fill the box without stretching */
  display: block;
  }
 .slide figcaption {

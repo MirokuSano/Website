@@ -63,6 +63,7 @@
                 var actionCell = row.insertCell();
 
                 actionCell.appendChild(makeUpdateButton(i));
+                actionCell.appendChild(makeDeleteButton(i));
             }
         }
 
@@ -77,6 +78,16 @@
             return button;
         }
 
+        function makeDeleteButton(index) {
+            var deleteButton = document.createElement('button');
+            deleteButton.textContent = "Delete";
+
+            deleteButton.addEventListener('click', function() {
+                deleteGrade(index);
+            });
+            return deleteButton;
+        }
+
         function loadForUpdate(index) {
             selectedIndex = index;
 
@@ -87,6 +98,30 @@
 
             saveButton.value = "Update";
             message.textContent = "Change the values, then click to the update button above the table.";
+        }
+
+        function deleteGrade(index) {
+            var sure = confirm("Delete the record of " + grades[index].name + "?");
+            if(!sure){
+                return;
+            }
+
+            grades.splice(index, 1);
+
+            if (selectedIndex === index) {
+                selectedIndex = -1;
+                saveButton.value = "Save";
+                lrnInput.value = "";
+                nameInput.value = "";
+                subjectInput.value = "";
+                gradeInput.value = "";
+            } else if (selectedIndex > index) {
+                selectedIndex = selectedIndex - 1;
+            }
+
+            localStorage.setItem('grades', JSON.stringify(grades));
+            message.textContent = "Deleted.";
+            showGrades();
         }
 
         function saveGrade() {

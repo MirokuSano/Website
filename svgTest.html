@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Test</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        body {
+            font-family: system-ui, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .box {
+            padding: 1.5rem;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .box h1 {
+            font-size: 1.25rem;
+            margin: 0 0 1rem 0;
+            text-align: center;
+        }
+
+        #svg2 {
+            background-color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <a href ="index.html">Home</a>
+    <div class="container">
+        <!-- SVG 1 -->
+        <div class="box">
+            <h1>1 (circle element)</h1>
+            <svg viewBox="0 0 200 200" style="border: 2px solid black;">
+                <circle cx="100" cy="100" r="70" stroke="blue" stroke-width="5" fill="lightblue" />
+            </svg>
+        </div>
+
+        <!-- SVG 2 -->
+        <div class="box">
+            <h1>2 (g element)</h1>
+            <svg viewBox="0 0 420 220">
+                <defs>
+                    <linearGradient id="gfgStr">
+                        <stop offset="50%" stop-color="green" />
+                        <stop offset="100%" stop-color="blue" />
+                    </linearGradient>
+                </defs>
+                <g fill="white" stroke="url(#gfgStr)" stroke-width="15" transform="translate(10, 10)">
+                    <rect width="400" height="200" />
+                    <rect width="200" height="200" />
+                    <rect width="200" height="100" />
+                </g>
+            </svg>
+        </div>
+
+        <!-- SVG 3 -->
+        <div class="box">
+            <h1>3 (polygon element)</h1>
+            <svg id="svg2" viewBox="0 0 200 210">
+                <polygon points="100,100 15,205 150,7 20,0" fill="green" stroke="yellow" />
+            </svg>
+        </div>
+
+        <!-- SVG 4 -->
+        <div class="box">
+            <h1>4 (text element)</h1>
+            <svg viewBox="0 0 160 160">
+                <text x="10" y="10" fill="green" transform="rotate(30 20, 40)">
+                    GeeksforGeeks
+                </text>
+                <text x="40" y="40" fill="green" transform="rotate(90 10, 60)">
+                    GeeksforGeeks
+                </text>
+            </svg>
+        </div>
+
+        <!-- SVG 5 -->
+        <div class="box">
+            <h1>5 (line element)</h1>
+            <svg viewBox="0 0 150 150">
+                <line x1="10" y1="10" x2="130" y2="130" stroke="green" stroke-width="3" />
+            </svg>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Flexbox Tutorial Demo</title>
+  
+  <style>
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 16px;
+  font-family: system-ui, -apple-system, sans-serif;    
+}
+
+.parent {
+  display: flex;
+  flex-direction: row; /* row | row-reverse | column | column-reverse */
+  flex-wrap: wrap; /* nowrap | wrap | wrap-reverse */
+  justify-content: start; /* start | end | center | space-between | space-around | space-evenly */
+  align-items: stretch; /* stretch | start | end | center */
+  align-content: stretch; /* used when multiple wrapped rows exist */
+  gap: 25px;
+  min-height: 300px;
+  padding: 16px;
+  border: 3px solid #6b21a8;
+}
+
+.child {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto; /* or an explicit value like 250px or 25% */
+  padding: 16px;
+  background-color: #86efac;
+  border: 1px solid #166534;
+}
+
+.peacemaker {
+  background-color: #93c5fd;
+  border-color: #1e40af;
+  /* Example: order: 4; flex-grow: 2; */
+}
+
+.rebel {
+  background-color: #fde047;
+  border-color: #854d0e;
+  /* Example: flex-grow: 1; align-self: end; */
+}
+
+.favorite {
+  background-color: #fca5a5;
+  border-color: #991b1b;
+}
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="child oldest">1 Oldest Child</div>
+    <div class="child peacemaker">2 Peacemaker Child</div>
+    <div class="child rebel">3 Rebel Child</div>
+    <div class="child favorite">4 Favorite Child</div>
+  </div>
+</body>
+</html>

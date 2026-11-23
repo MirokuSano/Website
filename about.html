@@ -1,93 +1,146 @@
 <!DOCTYPE html>
-	<head>
-		<title> About page </title>
-		<link rel="stylesheet" href="menuStyle.css">
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
-        <link rel="stylesheet" href="/resources/demos/style.css">
-        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-        <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
-        <script>
-            $(function () {
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About page</title>
+    <link rel="stylesheet" href="menuStyle.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
+    <script>
+        $(function () {
             $("#accordion").accordion({
-             collapsible: true
+                collapsible: true,
+                heightStyle: "content"
             });
-         });
-        </script>
+        });
+    </script>
 
-        <style>
-    #accordion {
-      max-width: 700px;
-      margin: 50px auto;
-    }
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    .ui-accordion-header {
-      background: #0A182C;
-      color: white;
-    }
-    .ui-accordion-content {  
-      background-color: #0f172a;
-    color: #94a3b8;
-    font-size: 10pt;  
-    line-height: 16pt;  
-    border: none;
-    }  
-  .page-layout {
-    display: flex;
-    gap: 30px;
-  }
-  
-  </style>
-	</head>
-	<body>
-		<nav class="navbar" role="navigation" aria-label="Main Navigation">
-        	<ul class="nav-list">
-            	<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            	<li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-            	<li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-            	<li class="nav-item"><a class="nav-link" href ="portfolio.html">Portfolio</a></li>
-            	<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        	</ul>
-    	</nav>
-    <div id="accordion">
-      
-      
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
 
-    <h3>About me</h3>
-    <div>
-      <p>Yes Its Me thanks</p>
-    </div>
-    <h3>Hobbies</h3>
-    <div>
-      <ul>
-        <li>Gaming</li>
-        <li>Watching Anime</li>
-        <li>Listening to Music</li>
-        <li>Reading Manga</li>
-        <li>Doing nothing</li>
-        <li>Thinking about the past (blinded by nostalgia)</li>
-      </ul>
-    </div>
-    <h3>Favorite games</h3>
-    <div>
-      <ul>
-        <li>Decaying Winter (Roblox)</li>
-        <li>Elemental Battlegrounds (Roblox)</li>
-        <li>Tower Defense Simulator (Roblox)</li>
-        <li>Dungeon Quest (Roblox)</li>
-        <li>Pixel Gun 3D</li>
-        <li>Blockman Go</li>
-        <li>Minecraft</li>
-      </ul>
-    </div>
-    <h3>Favorite songs</h3>
-    <div>
-      <p>I pretty much listen to almost everything 😁😁😁</p>
-    </div>
-    </div>
+        .page-layout {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 30px;
+            flex: 1;
+            max-width: 1100px;
+            width: 100%;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
 
-		<footer>
-        	<p align="center">&copy; 2026 Luscian Corp | Facebook: @ecnirPPPPP </p>
+        #accordion {
+            flex: 1 1 520px;
+            max-width: 700px;
+            margin: 0;
+            
+        }
+
+        .image {
+            flex: 0 1 280px;
+            margin: 0;
+        }
+
+        .image img {
+            display: block;
+            width: 100%;
+            max-width: 280px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .ui-accordion-header {
+            background: #1B365D;
+            color: white;
+            border: none;
+        }
+
+        .ui-accordion-content {
+            background-color: #1B365D;
+            color: #94a3b8;
+            font-size: 10pt;
+            line-height: 16pt;
+            border: none;
+        }
+
+        footer {
+            margin-top: auto;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+        <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="page-layout">
+        <div id="accordion">
+            <h3>About me</h3>
+            <div>
+                <p>Yes Its Me thanks</p>
+            </div>
+
+            <h3>Hobbies</h3>
+            <div>
+                <ul>
+                    <li>Gaming</li>
+                    <li>Watching Anime</li>
+                    <li>Listening to Music</li>
+                    <li>Reading Manga</li>
+                    <li>Doing nothing</li>
+                    <li>Thinking about the past (blinded by nostalgia)</li>
+                </ul>
+            </div>
+
+            <h3>Favorite games</h3>
+            <div>
+                <ul>
+                    <li>Decaying Winter (Roblox)</li>
+                    <li>Elemental Battlegrounds (Roblox)</li>
+                    <li>Tower Defense Simulator (Roblox)</li>
+                    <li>Dungeon Quest (Roblox)</li>
+                    <li>Pixel Gun 3D</li>
+                    <li>Blockman Go</li>
+                    <li>Minecraft</li>
+                </ul>
+            </div>
+
+            <h3>Favorite songs</h3>
+            <div>
+                <p>I pretty much listen to almost everything 😁😁😁</p>
+            </div>
+        </div>
+
+        <div class="image">
+            <img src="images/emo.jpg" alt="Profile photo">
+            <p style="text-align: center;">Me Grade 12 TVL ICT</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Luscian Corp | Facebook: @ecnirPPPPP</p>
     </footer>
-      
-	</body>
+</body>
 </html>

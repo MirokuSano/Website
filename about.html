@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About page</title>
+    <title>About | Prince Luscian Paglinawan</title>
     <link rel="stylesheet" href="menuStyle.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
     <script>
         $(function () {
             $("#accordion").accordion({
@@ -18,30 +19,6 @@
     </script>
 
     <style>
-        .about-box {
-            grid-column: 1;
-            grid-row: 1;
-            background-color: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            font-family: 'Segoe UI', sans-serif;
-        }
-
-        .profile-img {
-            width: 175px;
-            height: 175px;
-            border-radius: 50%;
-            background-size: cover;
-            background-position: center;
-            border: 4px solid #1B365D;
-            margin-bottom: 15px;
-        }
-        
         * {
             box-sizing: border-box;
         }
@@ -51,68 +28,126 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            font-family: 'Segoe UI', sans-serif;
         }
 
         .page-layout {
             display: flex;
-            flex-direction: row;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: flex-start;
             gap: 30px;
             flex: 1;
-            max-width: 1100px;
+            max-width: 1060px;
             width: 100%;
             margin: 50px auto;
             padding: 0 20px;
         }
 
+        .about-box {
+            flex: 0 1 320px;
+            background-color: #ffffff;
+            border: 1px solid #d8dfeb;
+            padding: 30px 24px;
+            border-radius: 12px;
+            box-shadow: inset 0 4px 0 #1B365D, 0 4px 14px rgba(0, 0, 0, 0.06);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 165px;
+            height: 165px;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            border: 4px solid #1B365D;
+            margin-bottom: 16px;
+        }
+
+        .profile-info h2 {
+            font-size: 22px;
+            color: #1B365D;
+            margin: 0 0 6px 0;
+        }
+
+        .profile-subtitle {
+            color: #555;
+            font-size: 15px;
+            margin: 0 0 18px 0;
+            padding-bottom: 14px;
+            border-bottom: 1px solid #e0e4ec;
+        }
+
+        .profile-details p {
+            text-align: left;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #222;
+            margin: 8px 0;
+        }
+
         #accordion {
             flex: 1 1 520px;
-            max-width: 700px;
+            max-width: 660px;
             margin: 0;
             font-family: 'Segoe UI', sans-serif;
-            
         }
 
-        .image {
-            flex: 0 1 280px;
-            margin: 0;
-        }
-
-        .image img {
-            display: block;
-            width: 100%;
-            max-width: 280px;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
-        .ui-accordion-header {
+        #accordion .ui-accordion-header {
             background: #1B365D;
-            color: white;
+            color: #ffffff;
             border: none;
+            border-radius: 6px;
+            padding: 12px 16px;
+            font-size: 17px;
+            font-weight: 600;
+            margin-top: 8px;
         }
 
-        .ui-accordion-content {
-            background-color: #ffffff;
-            color: #000000;
-            font-size: 10pt;
-            line-height: 16pt;
-            border: 4px solid #ffffff;
-            margin-bottom: 15px;
-            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+        #accordion .ui-accordion-header:first-child {
+            margin-top: 0;
+        }
 
+        #accordion .ui-accordion-header.ui-state-active,
+        #accordion .ui-accordion-header:hover {
+            background: #0A182C;
+            color: #ffffff;
+        }
+
+        #accordion .ui-accordion-content {
+            background-color: #ffffff;
+            color: #222222;
+            font-size: 15px;
+            line-height: 1.6;
+            border: 1px solid #d8dfeb;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            padding: 18px 22px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        #accordion ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        #accordion li {
+            margin-bottom: 6px;
         }
 
         footer {
             margin-top: auto;
             text-align: center;
             padding: 20px 0;
-            font-family: 'Segoe UI', sans-serif;
             font-weight: bold;
         }
-        
+
+        footer i {
+            margin-right: 4px;
+        }
     </style>
 </head>
 <body>
@@ -127,12 +162,23 @@
     </nav>
 
     <main class="page-layout">
+        <section class="about-box">
+            <div class="profile-img" style="background-image: url('images/suit.jpg');"></div>
+            <div class="profile-info">
+                <h2>Greetings! I'm Prince.</h2>
+                <p class="profile-subtitle">Graduating Senior High School Student</p>
+                <div class="profile-details">
+                    <p><b>School:</b> Gov. Juanito Reyes Remulla Senior High School</p>
+                    <p><b>Grade &amp; Section:</b> 12 - Cooper</p>
+                    <p><b>Strand:</b> TVL - ICT (Computer Programming)</p>
+                </div>
+            </div>
+        </section>
+
         <div id="accordion">
-            <h3>About me</h3>
+            <h3>About Me</h3>
             <div>
-                <p>My name is Prince Luscian L. Paglinawan, currently a graduating Senior High School Student from
-                    Gov. Juanito Reyes Remulla Senior High School. I am from section Cooper and my Strand is TVL - ICT Computer Programming.
-                </p>
+                <p>My name is Prince Luscian L. Paglinawan, currently a graduating Senior High School student at Gov. Juanito Reyes Remulla Senior High School. I am from Grade 12 – Cooper under the TVL – ICT (Computer Programming) strand.</p>
             </div>
 
             <h3>Hobbies</h3>
@@ -147,7 +193,7 @@
                 </ul>
             </div>
 
-            <h3>Favorite games</h3>
+            <h3>Favorite Games</h3>
             <div>
                 <ul>
                     <li>Decaying Winter (Roblox)</li>
@@ -160,7 +206,7 @@
                 </ul>
             </div>
 
-            <h3>Favorite songs</h3>
+            <h3>Favorite Songs</h3>
             <div>
                 <ul>
                     <li>Vacations - Young</li>
@@ -170,26 +216,14 @@
                     <li>Yot Club - YKWIM?</li>
                     <li>wave to earth - seasons</li>
                     <li>Joji - Die For You</li>
-                    <li>I listen to so much more different genres of songs, all of it wouldnt fit here.</li>
-
+                    <li>I listen to so many different genres of songs that all of them wouldn't fit here.</li>
                 </ul>
             </div>
         </div>
-
-        <section class="about-box">
-        <div class="profile-img" style="background-image: url(images/suit.jpg)"></div>
-        <section class="profile-info">
-          <h2>Greetings! My name is Prince.</h2>
-          <p>I'm a graduating Senior High School Student.</p>
-          <p style="text-align: left;"><b>School:</b> Governor Juanito Reyes Remulla Senior High School</p>
-          <p style="text-align: left;"><b>Grade & Section:</b> 12 - Cooper</p>
-          <p style="text-align: left;"><b>Strand:</b> TVL - ICT (Computer Programming)</p>
-        </section>
-      </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Luscian Corp | Facebook: @ecnirPPPPP</p>
+        <p>&copy; 2026 Luscian Corp | <i class="fa-brands fa-facebook"></i> @ecnirPPPPP</p>
     </footer>
 </body>
 </html>

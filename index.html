@@ -3,45 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Menu </title>
+    <title>Home | Prince Luscian Paglinawan</title>
     <link rel="stylesheet" href="menuStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 
     <style>
         body {
             text-align: center;
             font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+        }
+
+        .home-container {
+            max-width: 880px;
+            margin: 50px auto;
+            padding: 0 20px;
         }
 
         .greetings {
             display: flex;
-            max-width: 800px;
-            margin: 60px auto;
             padding: 40px;
             text-align: left;
-            background-color: rgba(25, 0, 255, 0.04);
-            border: 1px solid rgba(25, 0, 255, 0.2);
+            background-color: rgba(27, 54, 93, 0.05);
+            border: 1px solid rgba(27, 54, 93, 0.2);
             border-radius: 12px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
         }
 
-        .greeting-text h4 {
-            font-size: 32px;
+        .greeting-text h3 {
+            font-size: 30px;
+            color: #1B365D;
             margin-top: 0;
-            margin-bottom: 6px;
-            padding-bottom: 6px;
-            border-bottom: 3px solid #1900ff;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #1B365D;
         }
 
         .greeting-text p {
-            font-size: 20px;
+            font-size: 18px;
             line-height: 1.6;
-            margin-bottom: 28px;
+            color: #222;
             margin-top: 0;
+            margin-bottom: 24px;
         }
         
+        .btn-primary {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #1B365D;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0A182C;
+            transform: translateY(-2px);
+        }
+        
+        .section-title {
+            font-size: 24px;
+            color: #1B365D;
+            text-align: left;
+            margin-bottom: 16px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #e0e4ec;
+        }
+        
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .skill-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #f4f6fa;
+            border: 1px solid #d0d8e8;
+            color: #1B365D;
+            padding: 10px 18px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .skill-badge:hover {
+            background-color: #e6ecf5;
+            transform: translateY(-2px);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .project-card {
+            background-color: #ffffff;
+            border: 1px solid #d8dfeb;
+            border-radius: 10px;
+            padding: 24px;
+            box-shadow: inset 0 4px 0 #1B365D, 0 4px 14px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: inset 0 4px 0 #0A182C, 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .project-card h4 {
+            font-size: 20px;
+            color: #1B365D;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .project-card p {
+            font-size: 15px;
+            color: #444;
+            line-height: 1.5;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        .project-tag {
+            font-size: 13px;
+            font-weight: 600;
+            color: #1B365D;
+            background-color: rgba(27, 54, 93, 0.08);
+            padding: 4px 10px;
+            border-radius: 4px;
+            align-self: flex-start;
+        }
+
+        footer i {
+            margin-right: 4px;
+        }
+
+        .skill-badge i {
+            font-size: 20px;
+            margin-right: 0;
+        }
     </style>
+
 </head>
 <body>
+
     <nav class="navbar" role="navigation" aria-label="Main Navigation">
         <ul class="nav-list">
             <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
@@ -51,21 +171,47 @@
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
         
-        <h1 style="color: white;"> Prince Luscian Paglinawan</h1>
-        <h2 style="color: white;"> 12 - Cooper </h2>
+        <h1 style="color: white;">Prince Luscian Paglinawan</h1>
+        <h2 style="color: white;">12 - Cooper</h2>
         <br>
     </nav>
         
-    <div class="greetings">
-        <div class="greeting-text">
-            <h4>Greetings!</h4>
-            <p>Hey, Hi, Hello! Name's Prince from Grade 12 section Cooper! Welcome to my landing page! This site is where I upload
-            my projects and some of my information so in this site, you will see my work and learn more about me.</p>
-        </div>
-    </div>
+    <main class="home-container">
+        
+        <section class="greetings">
+            <div class="greeting-text">
+                <h3>Greetings!</h3>
+                <p>Hey, I'm Prince from Grade 12 – Cooper. Welcome to my personal landing page! Here you can check out my coding projects, explore my gallery, and learn a bit more about what I do.</p>
+                <a href="portfolio.html" class="btn-primary">Explore My Portfolio &rarr;</a>
+            </div>
+        </section>
+        
+        <section>
+            <h3 class="section-title">Tech Stack &amp; Tools</h3>
+            <div class="skills-grid">
+                <span class="skill-badge"> <i class="fa-brands fa-html5"></i> HTML</span>
+                <span class="skill-badge"><i class="fa-brands fa-css3"></i> CSS</span>
+                <span class="skill-badge"><i class="fa-brands fa-js"></i> JavaScript</span>
+                <span class="skill-badge"><i class="fa-solid fa-code"></i> jQuery</span>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="section-title">Featured Projects</h3>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div>
+                        <h4>Who Beats Goku Game</h4>
+                        <p>An interactive fun and sarcastic drag-and-drop web game built to demonstrate DOM manipulation and the HTML5 Drag and Drop API.</p>
+                    </div>
+                    <span class="project-tag">HTML / CSS / JavaScript</span>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2026 Luscian Corp | Facebook: @ecnirPPPPP </p>
+        <p>&copy; 2026 Luscian Corp | <i class="fa-brands fa-facebook"></i> @ecnirPPPPP</p>
     </footer>
 
 </body>

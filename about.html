@@ -18,6 +18,30 @@
     </script>
 
     <style>
+        .about-box {
+            grid-column: 1;
+            grid-row: 1;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .profile-img {
+            width: 175px;
+            height: 175px;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            border: 4px solid #1B365D;
+            margin-bottom: 15px;
+        }
+        
         * {
             box-sizing: border-box;
         }
@@ -46,6 +70,7 @@
             flex: 1 1 520px;
             max-width: 700px;
             margin: 0;
+            font-family: 'Segoe UI', sans-serif;
             
         }
 
@@ -70,18 +95,24 @@
         }
 
         .ui-accordion-content {
-            background-color: #1B365D;
-            color: #94a3b8;
+            background-color: #ffffff;
+            color: #000000;
             font-size: 10pt;
             line-height: 16pt;
-            border: none;
+            border: 4px solid #ffffff;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+
         }
 
         footer {
             margin-top: auto;
             text-align: center;
             padding: 20px 0;
+            font-family: 'Segoe UI', sans-serif;
+            font-weight: bold;
         }
+        
     </style>
 </head>
 <body>
@@ -99,7 +130,9 @@
         <div id="accordion">
             <h3>About me</h3>
             <div>
-                <p>Yes Its Me thanks</p>
+                <p>My name is Prince Luscian L. Paglinawan, currently a graduating Senior High School Student from
+                    Gov. Juanito Reyes Remulla Senior High School. I am from section Cooper and my Strand is TVL - ICT Computer Programming.
+                </p>
             </div>
 
             <h3>Hobbies</h3>
@@ -129,14 +162,30 @@
 
             <h3>Favorite songs</h3>
             <div>
-                <p>I pretty much listen to almost everything 😁😁😁</p>
+                <ul>
+                    <li>Vacations - Young</li>
+                    <li>Vacations - Telephones</li>
+                    <li>Whirr - Leave</li>
+                    <li>Pinegrove - Need 2</li>
+                    <li>Yot Club - YKWIM?</li>
+                    <li>wave to earth - seasons</li>
+                    <li>Joji - Die For You</li>
+                    <li>I listen to so much more different genres of songs, all of it wouldnt fit here.</li>
+
+                </ul>
             </div>
         </div>
 
-        <div class="image">
-            <img src="images/emo.jpg" alt="Profile photo">
-            <p style="text-align: center;">Me Grade 12 TVL ICT</p>
-        </div>
+        <section class="about-box">
+        <div class="profile-img" style="background-image: url(images/suit.jpg)"></div>
+        <section class="profile-info">
+          <h2>Greetings! My name is Prince.</h2>
+          <p>I'm a graduating Senior High School Student.</p>
+          <p style="text-align: left;"><b>School:</b> Governor Juanito Reyes Remulla Senior High School</p>
+          <p style="text-align: left;"><b>Grade & Section:</b> 12 - Cooper</p>
+          <p style="text-align: left;"><b>Strand:</b> TVL - ICT (Computer Programming)</p>
+        </section>
+      </section>
     </main>
 
     <footer>

@@ -76,6 +76,7 @@
     list-style: none;
     padding: 20px;
     justify-content: center;
+    font-family: 'Segoe UI', sans-serif;
     }
 
 .box:hover {
@@ -100,6 +101,8 @@ footer {
     	width: 100%;
 	background-color: #1B365D;
 	color: white;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
 }
 
  .carousel {
